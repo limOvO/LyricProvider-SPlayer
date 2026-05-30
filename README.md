@@ -21,10 +21,10 @@
 
 | 平台名称               | 标识符                 | 功能说明                 |
 |:-------------------|:--------------------|:---------------------|
-| 🍎 **Apple Music** | `apple-music`       | 支持动态歌词、翻译歌词          |
-| ☁️ **网易云音乐/荣耀版**   | `163-music`         | 支持动态歌词、翻译歌词          |
-| 🐧 **QQ 音乐**       | `qq-music`          | 支持动态歌词、翻译歌词          |
-| 🐧 **QQ 音乐 HD**    | `qq-music-hd`       | 支持动态歌词、翻译歌词          |
+| 🍎 **Apple Music** | `apple-music`       | 支持逐字、翻译、背景人声、对唱格式歌词  |
+| ☁️ **网易云音乐/荣耀版**   | `163-music`         | 支持逐字歌词、翻译歌词          |
+| 🐧 **QQ 音乐**       | `qq-music`          | 支持逐字歌词、翻译歌词          |
+| 🐧 **QQ 音乐 HD**    | `qq-music-hd`       | 支持逐字歌词、翻译歌词          |
 | 🧊 **LX 音乐**       | `lx-music`          | 支持翻译歌词显示             |
 | 🐶 **酷狗音乐/概念版**    | `kugou-music`       | **需在 App 内开启车载歌词模式** |
 | 📻 **酷我音乐**        | `kuwo-music`        | **需在 App 内开启车载歌词模式** |
@@ -42,7 +42,7 @@
 | 📱 **魅族歌词支持** | `meizu-provider` | 适用于已适配魅族状态栏歌词的播放器 |
 | 🧂 **车载歌词支持** | `car-provider`   | 适用于已适配车载歌词适配的播放器  |
 
-### 🚀 原生支持
+### 💡 已原生适配的应用
 
 - [**光锥音乐**](https://coneplayer.trantor.ink/)
 - **Flamingo**
@@ -51,11 +51,13 @@
 - [**Kanade**](https://github.com/rcmiku/Kanade)
 - **Sollin Player**
 - [**QZ Music**](https://github.com/lqtmcstudio/QZMusic)
+- [**棉花音乐**](https://github.com/pure-music/PureMusic)
+
+#### 已适配了但没有你的播放器？请[提交 issue](https://github.com/tomakino/LyricProvider/issues)。
 
 ---
 
 ## 📥 快速安装
-
 
 1. **下载**：前往 [Releases 页面](https://github.com/tomakino/LyricProvider/releases) 获取最新的 APK
    安装包。
@@ -69,9 +71,9 @@
 
 我们非常欢迎社区提交 Pull Request 来适配更多音乐 App。
 
-请阅读 [开发文档](https://github.com/tomakino/lyricon/blob/master/lyric/bridge/provider/README.md)
+请阅读 [开发文档](https://tomakino.github.io/lyricon/zh-cn/developer/provider/)
 
-或者 [订阅歌词](https://github.com/tomakino/lyricon/blob/master/lyric/bridge/subscriber/README.md)
+或者 [订阅歌词](https://tomakino.github.io/lyricon/zh-cn/developer/subscriber/)
 
 ---
 

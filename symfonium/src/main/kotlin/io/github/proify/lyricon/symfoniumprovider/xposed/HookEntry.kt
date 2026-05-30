@@ -4,27 +4,26 @@
  * http://www.apache.org/licenses/LICENSE-2.0
  */
 
-package io.github.proify.lyricon.kwprovider.xposed
+package io.github.proify.lyricon.symfoniumprovider.xposed
 
 import com.highcapable.yukihookapi.YukiHookAPI
 import com.highcapable.yukihookapi.annotation.xposed.InjectYukiHookWithXposed
 import com.highcapable.yukihookapi.hook.xposed.proxy.IYukiHookXposedInit
-import io.github.proify.lyricon.kwprovider.xposed.Constants.PROVIDER_PACKAGE_NAME
+import io.github.proify.lyricon.symfoniumprovider.xposed.Constants.PROVIDER_PACKAGE_NAME
 
 @InjectYukiHookWithXposed(modulePackageName = PROVIDER_PACKAGE_NAME)
 open class HookEntry : IYukiHookXposedInit {
 
     override fun onHook() {
         YukiHookAPI.encase {
-            loadApp("cn.kuwo.player", KuWo())
+            loadApp("app.symfonik.music.player", Symfonium())
         }
     }
 
     override fun onInit() {
-        super.onInit()
         YukiHookAPI.configs {
             debugLog {
-                tag = "KuGouMusicProvider"
+                tag = "SymfoniumProvider"
             }
         }
     }

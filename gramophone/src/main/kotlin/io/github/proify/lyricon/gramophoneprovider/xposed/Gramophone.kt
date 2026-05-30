@@ -29,8 +29,9 @@ import kotlinx.coroutines.withContext
 
 /**
  * Gramophone 播放器的 Lyricon 适配钩子实现类.
- * * 该类负责拦截 Gramophone 的播放状态与轨道变化, 并将歌词元数据推送至 Lyricon 服务.
- * * @property tag 日志标识符
+ *
+ * 该类负责拦截 Gramophone 的播放状态与轨道变化, 并将歌词元数据推送至 Lyricon 服务.
+ * @property tag 日志标识符
  */
 open class Gramophone(val tag: String = "GramophoneProvider") : YukiBaseHooker() {
 
