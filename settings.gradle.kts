@@ -31,7 +31,7 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "LyricProvider"
+rootProject.name = "LyricProvider-SPlayer"
 include(":share:extensions-kt")
 include(":share:extensions-android")
 

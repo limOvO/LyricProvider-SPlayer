@@ -1,10 +1,12 @@
-# LyricProvider - SPlayer 歌词提供器
+# LyricProvider - SPlayer
+
+> **聲明**：本專案所有程式碼完全由 AI 生成，未經人工審核，使用風險自負。
 
 #### 基于 Xposed 的歌词注入模块，专为 [SPlayer-for-Android](https://github.com/imsyy/SPlayer-for-Android) 适配
 
 ![Platform](https://img.shields.io/badge/Platform-Android-brightgreen?style=flat&logo=android)
-![Release](https://img.shields.io/github/v/release/limOvO/LyricProvider?style=flat&color=blue&logo=github)
-![License](https://img.shields.io/github/license/limOvO/LyricProvider?style=flat)
+![Release](https://img.shields.io/github/v/release/limOvO/LyricProvider-SPlayer?style=flat&color=blue&logo=github)
+![License](https://img.shields.io/github/license/limOvO/LyricProvider-SPlayer?style=flat)
 
 ## 🎯 功能
 
@@ -17,7 +19,7 @@
 
 ## 📥 安装
 
-1. **下载**：前往 [Releases 页面](https://github.com/limOvO/LyricProvider/releases) 获取最新 APK。
+1. **下载**：前往 [Releases 页面](https://github.com/limOvO/LyricProvider-SPlayer/releases) 获取最新 APK。
 2. **激活**：在 **LSPosed** 中勾选 `SPlayerProvider` 模块。
 3. **作用域**：勾选 `SPlayer`（`top.imsyy.splayer.android`）。
 4. **重启**：强行停止 SPlayer 并重新打开。
@@ -36,7 +38,7 @@
 
 ## 📄 许可证
 
-基于原项目 [tomakino/LyricProvider](https://github.com/tomakino/LyricProvider)（Apache 2.0）修改，保留原始许可证。
+基于 [tomakino/LyricProvider](https://github.com/tomakino/LyricProvider)（Apache 2.0）修改。
 
 ```
 Copyright 2026 Proify
