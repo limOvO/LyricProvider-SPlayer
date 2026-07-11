@@ -1,6 +1,21 @@
 # LyricProvider - SPlayer
 
+> [!CAUTION]
 > **聲明**：本專案所有程式碼完全由 AI 生成，未經人工審核，使用風險自負。
+
+<p align="center">
+  <strong style="color: #dc3545; font-size: 1.2em;">
+    ⚠️ 本專案所有程式碼完全由 AI 生成，未經人工審核，使用風險自負。
+  </strong>
+</p>
+
+<p align="center">
+  <img src="https://img.shields.io/badge/AI_GENERATED-DISCLAIMER-red?style=for-the-badge">
+  <br>
+  <img src="https://img.shields.io/badge/%E5%AE%8C%E5%85%A8%E7%94%B1AI%E7%94%9F%E6%88%90-%E6%9C%AA%E7%B6%93%E4%BA%BA%E5%B7%A5%E5%AF%A9%E6%A0%B8-yellow?style=for-the-badge">
+</p>
+
+---
 
 #### 基于 Xposed 的歌词注入模块，专为 [SPlayer-for-Android](https://github.com/imsyy/SPlayer-for-Android) 适配
 
