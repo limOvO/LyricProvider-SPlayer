@@ -1,5 +1,5 @@
 /*
- * Copyright 2026 Proify, Tomakino
+ * Copyright 2026 Proify
  * Licensed under the Apache License, Version 2.0
  * http://www.apache.org/licenses/LICENSE-2.0
  */
@@ -17,14 +17,14 @@ object ObjectUtils {
     private const val MAX_DEPTH = 5 // 防止过深递归
 
     /**
-     * 打印对象的字段和方法信息到 Log（支持递归）
+     * 打印对象的字段和方法信息�?Log（支持递归�?
      */
     fun print(
         obj: Any?,
         tag: String? = null,
         logLevel: Int = Log.DEBUG,
         prefix: List<String>? = null,
-        printList: Boolean = false // 保留参数，但逻辑已内建
+        printList: Boolean = false // 保留参数，但逻辑已内�?
     ) {
         if (obj == null) {
             logMessage(tag ?: TAG, logLevel, "Object is null")
@@ -36,29 +36,29 @@ object ObjectUtils {
         try {
             val visited = mutableSetOf<Any>()
             logMessage(logTag, logLevel, "╔═══════════════════════════════════════════")
-            logMessage(logTag, logLevel, "║ Class: ${obj.javaClass.name}")
+            logMessage(logTag, logLevel, "�?Class: ${obj.javaClass.name}")
             logMessage(logTag, logLevel, "╠═══════════════════════════════════════════")
 
             // 打印字段
             val fields = obj.javaClass.fields
             if (fields.isNotEmpty()) {
-                logMessage(logTag, logLevel, "║ Fields (${fields.size}):")
+                logMessage(logTag, logLevel, "�?Fields (${fields.size}):")
                 for (field in fields) {
                     field.isAccessible = true
                     try {
                         val value = field.get(obj)
                         val formatted =
-                            formatValueRecursive(value, visited, depth = 0, indent = "║   ")
-                        logMessage(logTag, logLevel, "║   ${field.name}: $formatted")
+                            formatValueRecursive(value, visited, depth = 0, indent = "�?  ")
+                        logMessage(logTag, logLevel, "�?  ${field.name}: $formatted")
                     } catch (e: IllegalAccessException) {
-                        logMessage(logTag, Log.WARN, "║   ${field.name}: <inaccessible>")
+                        logMessage(logTag, Log.WARN, "�?  ${field.name}: <inaccessible>")
                     } catch (e: Exception) {
-                        logMessage(logTag, Log.ERROR, "║   ${field.name}: <error: ${e.message}>")
+                        logMessage(logTag, Log.ERROR, "�?  ${field.name}: <error: ${e.message}>")
                     }
                 }
                 logMessage(logTag, logLevel, "╠═══════════════════════════════════════════")
             } else {
-                logMessage(logTag, logLevel, "║ No fields found")
+                logMessage(logTag, logLevel, "�?No fields found")
                 logMessage(logTag, logLevel, "╠═══════════════════════════════════════════")
             }
 
@@ -66,7 +66,7 @@ object ObjectUtils {
             val declaredMethods = obj.javaClass.methods
             val noArgMethods = declaredMethods.filter { it.parameterCount == 0 }
             if (noArgMethods.isNotEmpty()) {
-                logMessage(logTag, logLevel, "║ No-argument Methods (${noArgMethods.size}):")
+                logMessage(logTag, logLevel, "�?No-argument Methods (${noArgMethods.size}):")
                 for (method in noArgMethods) {
                     if (method.name.startsWith("access$")) continue
                     if (prefix != null && !prefix.any { method.name.startsWith(it) }) continue
@@ -75,16 +75,16 @@ object ObjectUtils {
                     try {
                         val value = method.invoke(obj)
                         val formatted =
-                            formatValueRecursive(value, visited, depth = 0, indent = "║   ")
-                        logMessage(logTag, logLevel, "║   ${method.name}(): $formatted")
+                            formatValueRecursive(value, visited, depth = 0, indent = "�?  ")
+                        logMessage(logTag, logLevel, "�?  ${method.name}(): $formatted")
                     } catch (e: IllegalAccessException) {
-                        logMessage(logTag, Log.WARN, "║   ${method.name}(): <inaccessible>")
+                        logMessage(logTag, Log.WARN, "�?  ${method.name}(): <inaccessible>")
                     } catch (e: Exception) {
-                        logMessage(logTag, Log.ERROR, "║   ${method.name}(): <error: ${e.message}>")
+                        logMessage(logTag, Log.ERROR, "�?  ${method.name}(): <error: ${e.message}>")
                     }
                 }
             } else {
-                logMessage(logTag, logLevel, "║ No no-argument methods found")
+                logMessage(logTag, logLevel, "�?No no-argument methods found")
             }
 
             logMessage(logTag, logLevel, "╚═══════════════════════════════════════════")
@@ -124,7 +124,7 @@ object ObjectUtils {
     }
 
     /**
-     * 递归格式化值，支持嵌套对象、集合、数组
+     * 递归格式化值，支持嵌套对象、集合、数�?
      */
     private fun formatValueRecursive(
         value: Any?,
@@ -169,7 +169,7 @@ object ObjectUtils {
                         sb.toString()
                     }
                 } finally {
-                    visited.remove(value) // 允许其他路径再次访问（非严格 DAG）
+                    visited.remove(value) // 允许其他路径再次访问（非严格 DAG�?
                 }
             }
         }

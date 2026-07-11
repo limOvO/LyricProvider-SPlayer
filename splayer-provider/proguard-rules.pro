@@ -1,0 +1,4 @@
+-dontwarn java.lang.reflect.AnnotatedType
+-keep class com.highcapable.kavaref.** { *; }
+-keep class io.github.proify.cloudlyric.** { *; }
+-keep class io.github.proify.lyricon.** { *; }

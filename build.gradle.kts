@@ -1,17 +1,11 @@
 /*
- * Copyright 2026 Proify, Tomakino
+ * Copyright 2026 Proify
  * Licensed under the Apache License, Version 2.0
  * http://www.apache.org/licenses/LICENSE-2.0
  */
 
 import com.android.build.api.artifact.SingleArtifact
 import com.android.build.api.variant.ApplicationAndroidComponentsExtension
-
-/*
- * Copyright 2026 Proify, Tomakino
- * Licensed under the Apache License, Version 2.0
- * http://www.apache.org/licenses/LICENSE-2.0
- */
 
 // Top-level build file where you can add configuration options common to all sub-projects/modules.
 plugins {

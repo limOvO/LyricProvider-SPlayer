@@ -1,5 +1,5 @@
 /*
- * Copyright 2026 Proify, Tomakino
+ * Copyright 2026 Proify
  * Licensed under the Apache License, Version 2.0
  * http://www.apache.org/licenses/LICENSE-2.0
  */
@@ -59,7 +59,6 @@ configure<ApplicationExtension> {
 
 dependencies {
     implementation(project(":share:extensions-android"))
-    implementation(project(":share:cloudlyric"))
 
     implementation(libs.lyricon.provider)
     implementation(libs.kotlinx.serialization.json)

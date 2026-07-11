@@ -13,8 +13,12 @@
 /.idea/pandoc.xml
 
 .DS_Store
-/build
+build/
 /captures
 .externalNativeBuild
 .cxx
 local.properties
+
+backup/
+release.jks
+*.apk

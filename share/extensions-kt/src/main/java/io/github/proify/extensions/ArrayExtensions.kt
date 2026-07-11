@@ -1,5 +1,5 @@
 /*
- * Copyright 2026 Proify, Tomakino
+ * Copyright 2026 Proify
  * Licensed under the Apache License, Version 2.0
  * http://www.apache.org/licenses/LICENSE-2.0
  */
@@ -7,7 +7,7 @@
 package io.github.proify.extensions
 
 /**
- * 将平铺数组 ["k1", "v1", "k2", "v2"] 转换为 Map
+ * 将平铺数�?["k1", "v1", "k2", "v2"] 转换�?Map
  */
 fun Array<*>.toPairMap(): Map<String, String> {
     if (this.isEmpty()) return emptyMap()
