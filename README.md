@@ -1,13 +1,13 @@
 # LyricProvider - SPlayer
 
 > [!CAUTION]
-> <div style="font-size:1.5em">**聲明**：本專案所有程式碼完全由 AI 生成，未經人工審核，使用風險自負。</div>
+> <span style="font-size:1.5em"><strong>聲明</strong>：本專案所有程式碼完全由 AI 生成，未經人工審核，使用風險自負。</span>
 
 > [!CAUTION]
-> <div style="font-size:1.5em">**聲明**：本專案所有程式碼完全由 AI 生成，未經人工審核，使用風險自負。</div>
+> <span style="font-size:1.5em"><strong>聲明</strong>：本專案所有程式碼完全由 AI 生成，未經人工審核，使用風險自負。</span>
 
 > [!CAUTION]
-> <div style="font-size:1.5em">**聲明**：本專案所有程式碼完全由 AI 生成，未經人工審核，使用風險自負。</div>
+> <span style="font-size:1.5em"><strong>聲明</strong>：本專案所有程式碼完全由 AI 生成，未經人工審核，使用風險自負。</span>
 
 ---
 
