@@ -87,17 +87,18 @@ object SPlayerLyricProvider : YukiBaseHooker() {
             }.hook {
                 after {
                     ensureInitialized()
-                    val metadata = args[0]
-                    if (metadata == null) return@after
-                    val titleField = metadata::class.java.getDeclaredField("title")
-                    val artistField = metadata::class.java.getDeclaredField("artist")
-                    titleField.isAccessible = true
-                    artistField.isAccessible = true
-                    val title = titleField.get(metadata) as? String ?: return@after
-                    val artist = artistField.get(metadata) as? String ?: ""
-                    currentSongName = title
-                    currentArtist = artist
-                    YLog.debug(tag = TAG, msg = "updateMetadata: $title - $artist")
+                    val metadata = args[0] ?: return@after
+                    try {
+                        val titleField = metadata::class.java.getDeclaredField("title").apply { isAccessible = true }
+                        val artistField = metadata::class.java.getDeclaredField("artist").apply { isAccessible = true }
+                        val title = titleField.get(metadata) as? String ?: return@after
+                        val artist = artistField.get(metadata) as? String ?: ""
+                        currentSongName = title
+                        currentArtist = artist
+                        YLog.debug(tag = TAG, msg = "updateMetadata: $title - $artist")
+                    } catch (t: Throwable) {
+                        YLog.error(tag = TAG, msg = "updateMetadata: failed to read TrackMetadata fields", e = t)
+                    }
                 }
             }
         }
@@ -169,6 +170,10 @@ object SPlayerLyricProvider : YukiBaseHooker() {
             created.player.setDisplayRoma(true)
             created.register()
             provider = created
+            Runtime.getRuntime().addShutdownHook(Thread {
+                provider?.destroy()
+                YLog.debug(tag = TAG, msg = "provider destroyed on shutdown")
+            })
             YLog.debug(tag = TAG, msg = "provider registered")
         } catch (e: Exception) {
             initAttempted = false
